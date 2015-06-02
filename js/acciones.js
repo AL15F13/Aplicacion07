@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
-	$('#btn_jugar').on('click', function(){
+	$('#btn_jugar').on('tap', function(){
 		var pantalla = $.mobile.getScreenHeight();
 		var encabezado = $('.ui-header').outerHeight();
 		var pie = $('.ui-footer').outerHeight();
@@ -10,7 +10,7 @@ document.addEventListener("deviceready",function(){
 		$('.cuadro').height(alto);
 		});//btnjugar.click
 		
-		$('.cuadro').on('vmousedown', function(){
+		$('.cuadro').on('tap', function(){
 			$(this).addClass('pulsado');
 			});//mousedown
 		
@@ -19,7 +19,7 @@ document.addEventListener("deviceready",function(){
 		return q.substring(1);
 	}	
 		
-		$('.cuadro').on('vmouseup', function (){
+		$('.cuadro').on('tap', function (){
 			$('#pantalla').append(quien($(this).attr('id')));
 			$(this).removeClass('pulsado');
 		});
