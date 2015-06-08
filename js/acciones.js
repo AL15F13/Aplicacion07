@@ -2,6 +2,19 @@
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
 	
+	CargarNombreJugador();
+	function CargarNombreJugador ()
+	{
+		basedatos.transaction(function(ejecutar){
+		var sql = "SELECT NombreUsuario FROM Usuario";
+		ejecutar.executeSql(sql, undefined,
+		        function(ejecutar, resultado){
+		var datosJugador = resultado.rows.item(0);
+		$('#jugador').text(datosJugador.NombreUsuario);
+				});
+		});
+	}
+	
 	var basedatos = window.sqlitePlugin.
 	openDatabase({name: "coloresBD.db",
 	createFromLocation: 1});
@@ -40,9 +53,10 @@ document.addEventListener("deviceready",function(){
 			$(this).removeClass('pulsado');
 		});
 		
+		
 	
-	//div	
-	//div
+	
+	
 });//device ready 
 });
 
