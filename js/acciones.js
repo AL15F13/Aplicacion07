@@ -53,9 +53,18 @@ document.addEventListener("deviceready",function(){
 			$(this).removeClass('pulsado');
 		});
 		
+		$('#btn_configurar').on('tap', function(){
+			$('#txt_nombre').val($('#jugador').text());
+		});//BTN_Configurar
 		
-	
-	
+		$('#btn_guardar').on('tap', function(){
+			var nuevonombre = $('#txt_nombre').val();
+			basedatos.transaction (function(consulta){
+			  consulta.executeSql("UPDATE Usuario SET NombreUsuario = ? WHERE ClaveUsuario = '1';",[nuevonombre]);
+			
+			});
+			cargarnombrejugador();
+		});
 	
 });//device ready 
 });
