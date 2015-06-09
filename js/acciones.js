@@ -6,7 +6,7 @@ document.addEventListener("deviceready",function(){
 	function CargarNombreJugador ()
 	{
 		basedatos.transaction(function(ejecutar){
-		var sql = "SELECT NombreUsuario FROM Usuario";
+		var sql = "SELECT NomberUsuario FROM Usuario";  //El campo se llama "NomberUsuario(no cambiar)"
 		ejecutar.executeSql(sql, undefined,
 		        function(ejecutar, resultado){
 		var datosJugador = resultado.rows.item(0);
@@ -65,6 +65,7 @@ document.addEventListener("deviceready",function(){
 			});
 			cargarnombrejugador();
 		});
+	
 	
 });//device ready 
 });
