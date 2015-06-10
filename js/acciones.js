@@ -81,7 +81,7 @@ $('#btnjugar').on ('tap',function(){
 	 audio.play($(this).attr('id'));
  });
 
-});//cuadro
+});//Device ready
 
  
 });
