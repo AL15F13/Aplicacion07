@@ -1,12 +1,12 @@
 @charset "utf-8";
-/* CSS Document */
-.cuadro
+/* CSS Document */#B1
 {
-	width:50%;
-	float:left;
+	background-color:#C3F;
 }
-.pulsado
+
+
+	     .pulsado
 {
-	background:-webkit-gradient(linear, 80% 20%,10% 21%,from(#FFF),to(#FFF));
+	background:-webkit-gradient(linear, 80% 20%, 10% 20%, from(#FFFFFF), to(#FFFFFF));
 }
 

@@ -6,11 +6,11 @@
  
   <title>Mi aplicacion</title>
 
-  <!--grupo CSS-->
-  <link rel="stylesheet" href="css/extra.css" />
-  <link rel="stylesheet" href="css/que.min.css" />
+  <!--grupo CSS-->  <link rel="stylesheet" href="css/extra.css"/> 
+  <link rel="stylesheet" href="css/Que.min.css" />
   <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
   <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+
         
         
 
@@ -27,76 +27,63 @@
  <!-- Principal -->
  <div data-role="page" id="principal" >   
   <div data-role="header">
-    <h1>Encabezado</h1>
+ 
+    <h1></h1>
   </div>
 
-  <div data-role="main" class="ui-content">
-   <div align="center">
-    <div style="width:50%">
-     <input type="text" placeholder="Nombre" id="jugador">
-    </div>
-    <div style="width:35%">
-     <a href="#tablero" id="btn_jugar"
-     class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all">Jugar</a>
-     <a href="#config" id="btn_configurar"
-     class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all">Configuración</a>
-    </div>
-   </div>
+  <div data-role="main" class="ui-content" align="center">
+   <div id="jugador"> Jugador </div>
+   <a href="#pagina2"  id="btnjugar" data-transition="flip" class="ui-btn ui-icon-check ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline">Jugar</a>
+</div>
 
-  </div>
-
-  <div data-role="footer">
-    <h1>@Said Galindo Flores</h1>
+<div align="center">
+<a href="file:///C|/Users/LANIX-22-PCA/Links/Downloads.lnk">Downloads</a><a href="#ajustes"  id="btnajustes" data-transition="flip" class="ui-btn ui-icon-gear ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline">Ajustes</a>
+</div>
+  <div data-role="footer" >
+    <h1>@José Roberto Ramírez Pérez</h1>
   </div>
  </div>  
  <!-- Principal -->
  
- <!-- Tablero -->
- <div data-role="page" id="tablero" >   
-  <!--<div data-role="header">
-    <h1>Encabezado</h1>
-  </div>-->
+  <!-- Pagina2 -->
+ <div data-role="page" id="pagina2" >   
+  <div data-role="header">
+   </div>
 
-  <div data-role="main" class="ui-content">
-   <div id="B1" style="background-color:#00F" class="cuadro">&nbsp;</div>
-   <div id="B2" style="background-color:#F00" class="cuadro">&nbsp;</div>
-   <div id="B3" style="background-color:#0F0" class="cuadro">&nbsp;</div>
-   <div id="B4" style="background-color:#FF0" class="cuadro">&nbsp;</div>
+ <div data-role="main" class="ui-content">
+  <div id="B1" style="background-color:#ff0; width:50%; float:left;" class="cuadro"> &nbsp; </div>
+  <div id="B2" style="background-color:#F00; width:50%; float:left;" class="cuadro"> &nbsp; </div>
+  <div id="B3" style="background-color:#0ff; width:50%; float:left;" class="cuadro"> &nbsp; </div>
+  <div id="B4" style="background-color:#3F0; width:50%; float:left;" class="cuadro"> &nbsp; </div>
+  
    
-
   </div>
 
   <div data-role="footer" data-position="fixed">
-    <h3> <div id="pantalla">Pulsó:</div></h3>
-    
+  <H3> <div  id="pantalla" >Pulso: </div> </H3>
   </div>
  </div>  
- <!-- Tablero -->
+ <!-- Pagina2 -->
 
-
- <!-- Configuración -->
- <div data-role="page" id="config" >   
+ 
+  <!-- Pagina3 -->
+ <div data-role="page" id="ajustes" >   
   <div data-role="header">
-    <h1>Encabezado</h1>
-  </div>
-
-  <div data-role="main" class="ui-content">
-   <div align="center">
-    <div style="width:50%">
-     <input type="text" placeholder="Que" id="txt_nombre">
-    </div>
-    <div style="width:35%">
-     <a href="#" id="btn_guardar"
-     class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-corner-all">Guardar</a>
-    </div>
    </div>
-
-  </div>
-
-  <div data-role="footer">
-   <h1>@Said Galindo Flores</h1>
+   <div align="center">
+   <input type="text" id="txtnombre">
+   
+   </div>
+   <div align="center">
+    <a href=""  id="btnguardar" data-transition="flip" class="ui-btn ui-icon-user ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline">Guardar</a>
+   </div>
+    <div data-role="footer" data-position="fixed">
+   <div  id="pantalla"></div> <div align="center"> <a href="#principal"  id="btninicio" data-transition="flip" class="ui-btn ui-icon-home ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline">Inicio</a></div>
   </div>
  </div>  
- <!-- Configuración -->
+ <!-- Pagina3 -->
+
+   
+   
  </body>
 </html> 
